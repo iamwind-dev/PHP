@@ -11,18 +11,14 @@
     <?php
         include("header.php");
     ?>
-    <h1>Danh sach danh muc</h1>
+    <h1>Xử ls sửa SP</h1>
     <?php
-    echo '<br>';
+    $id = $_GET["id"];
+    $tendanhmuc=$_GET["tendanhmuc"];
     $conn=mysqli_connect('localhost','root','060304','banhang');
-    $sql = "SELECT * from danhmuc";
+    $sql = "UPDATE danhmuc SET tendanhmuc='$tendanhmuc'  WHERE id=$id";
     $kq=mysqli_query($conn,$sql);
-    while ($row=mysqli_fetch_array($kq)){
-        echo "ID: ".$row['id'].'<br>';
-        echo '<a href="danhsachsanpham.php?iddm='.$row['id'].'">'.$row['tendanhmuc'].'</a>';
-        echo '<td><a href="suadm.php?iddm='.$row['id'].'">     Sửa     </a></a></td>';
-        echo '<hr>';
-    }
+    header("Location:danhsachdanhmuc.php");
 ?>
     
 </body>

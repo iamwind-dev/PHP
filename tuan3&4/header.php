@@ -24,7 +24,6 @@ session_start();
     ?>
     <a href="danhsachdanhmuc.php">Danh sách danh mục</a> |
         <a href="themsp.php">Thêm sản phẩm</a> |
-                
-</body>
+                <a href="themdm.php">Thêm danh mục</a> |
 
 </html>

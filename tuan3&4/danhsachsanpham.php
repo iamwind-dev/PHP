@@ -22,6 +22,7 @@
         <th>Giá</th>
         <th>So Lượng</th>
         <th>Xóa</th>
+        <th>Sửa</th>
       </tr>
     </thead>
     <tbody>
@@ -36,6 +37,7 @@
         echo '<td>'.$row['Gia'].'</td>';
         echo '<td>'.$row['Soluong'].'</td>';
         echo '<td><a href="xoasp.php?idsp='.$row['id'].'">Xóa</a></td>';
+        echo '<td><a href="suasp.php?idsp='.$row['id'].'">Sửa</a></a></td>';
         echo '</tr>';
     }
 ?>
