@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách danh mục</title>
-</head>
-
-<body>
-    <?php
-        include("header.php");
-    ?>
-
-    <h1>Xử ls thêm SP</h1>
-    <?php
-    $target_dir = "uploads/";
+<?php
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -56,19 +41,4 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
   }
 }
-    $tensp=$_POST["tensp"];
-    $soluong=$_POST["soluong"];
-    $gia=$_POST["gia"];
-    $iddanhmuc=$_POST["iddanhmuc"];
-    $hinhanh = htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
-    $motasp = $_POST["content"];
-    $conn=mysqli_connect('localhost','root','060304','banhang');
-    $sql = "INSERT INTO sanpham(tensp,Gia,Soluong,Iddanhmuc,hinhanh,mota) VALUES ('$tensp',$gia,$soluong,$iddanhmuc,'$hinhanh','$motasp')";
-    $kq=mysqli_query($conn,$sql);
-    
 ?>
-
-    
-</body>
-
-</html>

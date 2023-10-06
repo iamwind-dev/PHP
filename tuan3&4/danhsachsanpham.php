@@ -21,6 +21,7 @@
         <th>Tên sản phẩm</th>
         <th>Giá</th>
         <th>So Lượng</th>
+        <th>hình ảnh</th>
         <th>Xóa</th>
         <th>Sửa</th>
       </tr>
@@ -33,9 +34,10 @@
     $kq=mysqli_query($conn,$sql);
     while ($row=mysqli_fetch_array($kq)){
         echo '<tr>';
-        echo '<td>'.$row['tensp'].'</td>';
+        echo '<td><a href="chitietsp.php?idsp='.$row['id'].'">'.$row['tensp'].'</a></td>';
         echo '<td>'.$row['Gia'].'</td>';
         echo '<td>'.$row['Soluong'].'</td>';
+        echo '<td> <img src="uploads/'.$row['hinhanh'].'"/></td>';
         echo '<td><a href="xoasp.php?idsp='.$row['id'].'">Xóa</a></td>';
         echo '<td><a href="suasp.php?idsp='.$row['id'].'">Sửa</a></a></td>';
         echo '</tr>';
