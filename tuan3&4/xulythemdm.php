@@ -1,5 +1,5 @@
-
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,17 +10,17 @@
 
 <body>
     <?php
-        include("header.php");
+    include "header.php";
     ?>
     <h1>Xử ls thêm SP</h1>
     <?php
-    $tendm=$_GET["tendm"];
-    $conn=mysqli_connect('localhost','root','060304','banhang');
+    $tendm = $_GET["tendm"];
+    $conn = mysqli_connect('localhost', 'root', '060304', 'banhang');
     $sql = "INSERT INTO danhmuc(tendanhmuc) VALUES ('$tendm')";
-    $kq=mysqli_query($conn,$sql);
+    $kq = mysqli_query($conn, $sql);
     header("Location:danhsachdanhmuc.php");
-?>
-    
+    ?>
+
 </body>
 
 </html>
