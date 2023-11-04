@@ -4,7 +4,9 @@ if(isset($_POST['submit'])){
     foreach($_POST['qty'] as $key => $value){
         if (($value == 0) and (is_numeric($value))) {
             unset($_SESSION['cart'][$key]);
-        
+
+
+            
         } else if (($value > 0) and (is_numeric($value))){
             $_SESSION['cart'][$key] = $value;
         }
@@ -55,7 +57,7 @@ Nay</a></p>
         echo '<b>Tong tien cho cac mon hang: <font color="red">' .
             number_format($total, 3) . ' VND</font></b>';
         echo "<input type='submit' name='submit' value='Cap Nhat Gio Hang'>";
-        echo "<b><a href='danhsachdanhmuc.php'>Mua Tiep</a> - <a
+        echo "<b><a href='danhsachdanhmuc.php'>Mua Tiepp</a> - <a
 href='xoaspgh.php?productid=0'>Xoa Bo Gio Hang</a></b>";
             }
         }
