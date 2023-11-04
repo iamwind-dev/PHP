@@ -8,9 +8,6 @@
 </head>
 
 <body>
-    <?php
-        include("header.php");
-    ?>
     <h1>Xử lý đăng nhập</h1>
     <?php
     $username=$_GET["username"];

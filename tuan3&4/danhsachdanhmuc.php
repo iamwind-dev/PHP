@@ -21,7 +21,6 @@
       <tr>
         <th>Tên danh mục</th>
         <th>Sửa</th>
-
       </tr>
     </thead>
     <tbody>
@@ -39,6 +38,7 @@
       ?>
     </tbody>
   </table>
+        
 </body>
 
 </html>

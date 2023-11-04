@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách danh mục</title>
-</head>
-
-<body>
     <?php
-        include("header.php");
-    ?>
-    <h1>Xử ls sửa SP</h1>
-    <?php
-    $id = $_GET["id"];
+    $id = $_GET["idsp"];
     $tensp=$_GET["tensp"];
     $soluong=$_GET["soluong"];
     $gia=$_GET["gia"];
@@ -24,6 +10,3 @@
     header("Location:danhsachsanpham.php?iddm=$iddanhmuc");
 ?>
     
-</body>
-
-</html>
