@@ -19,7 +19,7 @@
     $kq=mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($kq);
     ?>
-    <form method="GET" action="xulysuasp.php" >
+    <form method="GET" action="xulysuasp.php?" >
         ID <br>
         <input type="text" name="id" value="<?php echo $row['id'];?>"><br>
         Tên SP <br>

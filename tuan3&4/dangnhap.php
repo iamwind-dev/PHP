@@ -8,8 +8,8 @@
 <body>
     <h1>Form dang nhap</h1>
     <form action="xulydangnhap.php" method="GET">
-        ten dang nhap<input type="text" name="username"><br>
-        mat khau <input type="password" name="password"><br>
+        ten dang nhap:<input type="text" name="username"><br>
+        mat khau      : <input type="password" name="password"><br>
         <input type="submit" value="Dang nhap">
 </body>
 </html>
