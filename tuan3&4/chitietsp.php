@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/tuan3&4/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Danh sách danh mục</title>
 </head>
@@ -49,6 +49,40 @@ gio hang</a></p>';
         echo '<td><a href="themgiohang.php?idsp=' . $row['id'] . '">Thêm vào giỏ hàng</a></td>';
         echo '</tr>';
 ?>
+        <h2>Bình luận</h2>
+        <div id="binhluan">
+<?php
+$sql1 = "SELECT * from binhluan where idsanpham=" . $_GET['idsp'];
+$kq1 = mysqli_query($conn, $sql1);
+while ($row1 = mysqli_fetch_array($kq1)) {
+    echo '<p>' . $row1['idbinhluan'] . '.' . $row1['noidung'] . '</p>';
+}
+echo '</div>';
+?>
+<input type="hidden" value="<?php echo $_GET['idsp']?>" id="idsp">
+<textarea name="noidung" id="noidung" ></textarea>
+<input type="button" value="Gửi" id="btnGui">
+<script>
+    $("#btnGui").click(function(){
+        $.ajax({
+            method :"POST",
+            url:'/tuan3&4/thembinhluan.php',
+            data:{id: $('#idsp').val(), noidung: $('#noidung').val()},
+        })
+        .done(function(data){
+            $("#binhluan").append('<p>'+$('#noidung').val()+'</p>');
+            $("#noidung").val('');
+        })
+    })
+</script>
+
+
+
+
+
+        
+    
+        
     
 </body>
 

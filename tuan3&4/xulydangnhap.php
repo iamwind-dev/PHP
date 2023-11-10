@@ -16,7 +16,7 @@
     $sql = "SELECT * FROM user where tendangnhap='$username' and matkhau=$password;";
     $kq=mysqli_query($conn,$sql);
     if($row=mysqli_fetch_array($kq)){
-        header("Location:danhsachdanhmuc.php");
+        header("Location:danhsachdanhmuc.php?");
     } else{
         echo "Sai";
     }
